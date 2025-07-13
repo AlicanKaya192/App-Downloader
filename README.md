@@ -6,6 +6,9 @@
 
 ---
 
+💡 Note: If the download does not start automatically, a temporary folder named Temp is created in the C:\ drive.
+You can manually run the .exe file directly from that folder if needed.
+
 ## 🚀 Features
 
 - Simple and user-friendly interface

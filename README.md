@@ -1,4 +1,4 @@
-# Application Builder - All In One
+# Application Downloader - All In One
 
 🛠️ A lightweight Windows Forms application that allows users to download multiple helper apps with a single click.  
 💻 Developer: alica  

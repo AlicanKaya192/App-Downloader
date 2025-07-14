@@ -1,0 +1,22 @@
+# Visual Studio ve derleme dosyalarını hariç tut
+.vs/
+*.ipch
+*.pch
+*.suo
+*.user
+*.cache
+*.ilk
+
+# Derleme dosyalarını hariç tut
+bin/
+obj/
+Debug/
+Release/
+
+# SQL Server LocalDB dosyaları
+*.mdf
+*.ldf
+
+# Log dosyaları
+*.log
+logs/

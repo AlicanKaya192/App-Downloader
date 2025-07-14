@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,7 +17,6 @@ namespace ApplicationBuilder_All_In_One
 
         Dictionary<string, string> applicationLinks = new Dictionary<string, string>
 {
-    // Daily Use
     { "Google Chrome", "https://dl.google.com/chrome/install/ChromeSetup.exe" },
     { "Brave", "https://referrals.brave.com/latest/BraveBrowserSetup.exe" },
     { "Opera", "https://net.geo.opera.com/opera/stable/windows" },
@@ -32,7 +26,7 @@ namespace ApplicationBuilder_All_In_One
     { "WinRAR", "https://www.rarlab.com/rar/winrar-x64-623.exe" },
     { "Spotify", "https://download.scdn.co/SpotifySetup.exe" },
     { "Zoom", "https://zoom.us/client/latest/ZoomInstaller.exe" },
-    { "Notepad++", "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest/download/npp.8.6.5.Installer.x64.exe" },
+    { "Notepad++", "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest/download/npp.8.8.3.Installer.x64.exe" },
     { "Adobe Reader", "https://ardownload2.adobe.com/pub/adobe/reader/win/AcrobatDC/2300820413/AcroRdrDC2300820413_en_US.exe" },
     { "Everything", "https://www.voidtools.com/Everything-1.4.1.1024.x64-Setup.exe" },
     { "Steam", "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe" },
@@ -42,10 +36,10 @@ namespace ApplicationBuilder_All_In_One
     { "IrfanView", "https://www.fosshub.com/IrfanView.html?dwl=iview462_setup.exe" },
     { "WhatsApp", "https://web.whatsapp.com/desktop/windows/release/x64/WhatsAppSetup.exe" },
 
-    // Software Development
+    // Development Tools
     { "Visual Studio 2022", "https://aka.ms/vs/17/release/vs_community.exe" },
     { "Visual Studio Code", "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" },
-    { "Microsoft Visual C++ Redistributable 2015-2022", "https://aka.ms/vs/17/release/vc_redist.x64.exe" },
+    { "C++ Redistributable 2015-2022", "https://aka.ms/vs/17/release/vc_redist.x64.exe" },
     { "Microsoft .NET Framework 4.8", "https://dotnet.microsoft.com/download/dotnet-framework/net48" },
     { "Microsoft .NET 6.0 Runtime", "https://dotnet.microsoft.com/download/dotnet/6.0/runtime" },
     { "Microsoft .NET 7.0 Runtime", "https://dotnet.microsoft.com/download/dotnet/7.0/runtime" },
@@ -61,78 +55,74 @@ namespace ApplicationBuilder_All_In_One
     { "MongoDB Compass", "https://downloads.mongodb.com/compass/mongodb-compass-1.41.4-win32-x64.exe" },
     { "Fiddler", "https://telerik-fiddler.s3.amazonaws.com/fiddler/FiddlerSetup.exe" },
     { "JetBrains Toolbox", "https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.28.1.15213.exe" },
-    { "Java JDK", "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe" }
+    { "Java JDK", "https://download.oracle.com/java/17/latest/jdk-17_windows-x64_bin.exe" },
+    { "Android Studio", "https://redirector.gvt1.com/edgedl/android/studio/install/2023.2.1.17/android-studio-2023.2.1.17-windows.exe" },
+    { "Unity Hub", "https://public-cdn.cloud.unity3d.com/hub/prod/UnityHubSetup.exe" },
+    { "Visual Studio Installer Projects", "https://marketplace.visualstudio.com/items?itemName=MadsKristensen.VisualStudioInstallerProjects" }
 };
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            List<string> selectedApplications = new List<string>();
-
-            // Browse all TabPages
+            var selectedApplications = new List<string>();
             foreach (TabPage tab in tabControl1.TabPages)
-            {
                 foreach (Control ctrl in tab.Controls)
-                {
                     if (ctrl is CheckBox cb && cb.Checked)
-                    {
                         selectedApplications.Add(cb.Text);
-                    }
-                }
-            }
-
-            progressBar1.Maximum = selectedApplications.Count;
-            progressBar1.Value = 0;
 
             foreach (string app in selectedApplications)
-            {
-                if (applicationLinks.TryGetValue(app, out string url))
-                {
-                    lblStatus.Text = $"{app} downloading...";
-                    await DownloadandRunApplication(app, url);
-                    progressBar1.Value += 1;
-                }
-                else
-                {
-                    lblStatus.Text = $"{app} URL not found!";
-                }
-            }
-
-            lblStatus.Text = "All operations have been completed.";
+                await DownloadAndInstallAsync(app, applicationLinks[app]);
         }
 
-        private async Task DownloadandRunApplication(string appName, string url)
+        private async Task DownloadAndInstallAsync(string appName, string url)
         {
             try
             {
-                string folder = @"C:\Temp\Applications";
+                string folder = Path.Combine(Path.GetTempPath(), "Applications");
                 Directory.CreateDirectory(folder);
                 string filePath = Path.Combine(folder, $"{appName}.exe");
 
-                using (WebClient client = new WebClient())
+                using (var client = new WebClient())
                 {
+                    client.DownloadProgressChanged += (s, e) =>
+                    {
+                        progressBar1.Maximum = 100;
+                        progressBar1.Value = e.ProgressPercentage;
+                        lblStatus.Text = $"{appName} downloading... {e.ProgressPercentage}%";
+                        Application.DoEvents();
+                    };
                     await client.DownloadFileTaskAsync(new Uri(url), filePath);
                 }
 
-                lblStatus.Text = $"{appName} is being established...";
+                lblStatus.Text = $"{appName} starting installation...";
+                Application.DoEvents();
 
-                ProcessStartInfo psi = new ProcessStartInfo
+                var psi = new ProcessStartInfo
                 {
                     FileName = filePath,
-                    UseShellExecute = false
+                    WorkingDirectory = folder,
+                    UseShellExecute = true,
+                    Verb = "runas",
+                    WindowStyle = ProcessWindowStyle.Normal
                 };
 
-                using (Process proc = Process.Start(psi))
-                {
-                    proc.WaitForExit(); // Waits until the user installs and closes the window
-                }
-
-                Process.Start(psi);
+                var proc = Process.Start(psi);
+                if (proc != null)
+                    await Task.Run(() => proc.WaitForExit());
             }
             catch (Exception ex)
             {
-                lblStatus.Text = $"{appName} failed to load: {ex.Message}";
+                lblStatus.Text = $"{appName} failed: {ex.Message}";
+                MessageBox.Show($"Error installing {appName}: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void Applications_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+                "This application is designed to download and install various applications automatically. Please ensure you have a stable internet connection and sufficient permissions to install software on your system.",
+                "Information",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
+        }
     }
 }

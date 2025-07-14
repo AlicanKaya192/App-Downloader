@@ -30,18 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Applications));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.checkBox15 = new System.Windows.Forms.CheckBox();
+            this.checkBox9 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.JetBrains = new System.Windows.Forms.CheckBox();
             this.Fiddler = new System.Windows.Forms.CheckBox();
             this.MongoDB = new System.Windows.Forms.CheckBox();
             this.XAMPP = new System.Windows.Forms.CheckBox();
             this.Docker = new System.Windows.Forms.CheckBox();
             this.MySQL = new System.Windows.Forms.CheckBox();
+            this.checkBox13 = new System.Windows.Forms.CheckBox();
             this.Postman = new System.Windows.Forms.CheckBox();
+            this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.Python = new System.Windows.Forms.CheckBox();
+            this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.Node = new System.Windows.Forms.CheckBox();
+            this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.GitHub = new System.Windows.Forms.CheckBox();
             this.Git = new System.Windows.Forms.CheckBox();
             this.VSCode = new System.Windows.Forms.CheckBox();
@@ -49,6 +64,7 @@
             this.Java = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -74,12 +90,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -88,23 +99,33 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tabPage2.Controls.Add(this.checkBox15);
+            this.tabPage2.Controls.Add(this.checkBox9);
+            this.tabPage2.Controls.Add(this.checkBox8);
+            this.tabPage2.Controls.Add(this.checkBox7);
             this.tabPage2.Controls.Add(this.checkBox6);
             this.tabPage2.Controls.Add(this.checkBox5);
             this.tabPage2.Controls.Add(this.checkBox4);
             this.tabPage2.Controls.Add(this.checkBox3);
             this.tabPage2.Controls.Add(this.checkBox2);
             this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.checkBox14);
             this.tabPage2.Controls.Add(this.JetBrains);
             this.tabPage2.Controls.Add(this.Fiddler);
             this.tabPage2.Controls.Add(this.MongoDB);
             this.tabPage2.Controls.Add(this.XAMPP);
             this.tabPage2.Controls.Add(this.Docker);
             this.tabPage2.Controls.Add(this.MySQL);
+            this.tabPage2.Controls.Add(this.checkBox13);
             this.tabPage2.Controls.Add(this.Postman);
+            this.tabPage2.Controls.Add(this.checkBox12);
             this.tabPage2.Controls.Add(this.Python);
+            this.tabPage2.Controls.Add(this.checkBox11);
             this.tabPage2.Controls.Add(this.Node);
+            this.tabPage2.Controls.Add(this.checkBox10);
             this.tabPage2.Controls.Add(this.GitHub);
             this.tabPage2.Controls.Add(this.Git);
             this.tabPage2.Controls.Add(this.VSCode);
@@ -117,15 +138,124 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Software Development";
             // 
+            // checkBox15
+            // 
+            this.checkBox15.AutoSize = true;
+            this.checkBox15.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox15.Location = new System.Drawing.Point(755, 206);
+            this.checkBox15.Name = "checkBox15";
+            this.checkBox15.Size = new System.Drawing.Size(280, 23);
+            this.checkBox15.TabIndex = 51;
+            this.checkBox15.Text = "VS Installer Projects";
+            this.checkBox15.UseVisualStyleBackColor = false;
+            // 
+            // checkBox9
+            // 
+            this.checkBox9.AutoSize = true;
+            this.checkBox9.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox9.Location = new System.Drawing.Point(766, 206);
+            this.checkBox9.Name = "checkBox9";
+            this.checkBox9.Size = new System.Drawing.Size(280, 23);
+            this.checkBox9.TabIndex = 51;
+            this.checkBox9.Text = "VS Installer Projects";
+            this.checkBox9.UseVisualStyleBackColor = false;
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox8.Location = new System.Drawing.Point(54, 322);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(136, 23);
+            this.checkBox8.TabIndex = 50;
+            this.checkBox8.Text = "Unity Hub";
+            this.checkBox8.UseVisualStyleBackColor = false;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox7.Location = new System.Drawing.Point(54, 293);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(196, 23);
+            this.checkBox7.TabIndex = 49;
+            this.checkBox7.Text = "Android Studio";
+            this.checkBox7.UseVisualStyleBackColor = false;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox6.Location = new System.Drawing.Point(54, 235);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(340, 23);
+            this.checkBox6.TabIndex = 48;
+            this.checkBox6.Text = "Microsoft .NET 8.0 Runtime";
+            this.checkBox6.UseVisualStyleBackColor = false;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox5.Location = new System.Drawing.Point(54, 206);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(340, 23);
+            this.checkBox5.TabIndex = 47;
+            this.checkBox5.Text = "Microsoft .NET 7.0 Runtime";
+            this.checkBox5.UseVisualStyleBackColor = false;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox4.Location = new System.Drawing.Point(54, 177);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(340, 23);
+            this.checkBox4.TabIndex = 46;
+            this.checkBox4.Text = "Microsoft .NET 6.0 Runtime";
+            this.checkBox4.UseVisualStyleBackColor = false;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox3.Location = new System.Drawing.Point(54, 148);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(364, 23);
+            this.checkBox3.TabIndex = 45;
+            this.checkBox3.Text = "Microsoft .NET Framework 4.8";
+            this.checkBox3.UseVisualStyleBackColor = false;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox2.Location = new System.Drawing.Point(54, 264);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(376, 23);
+            this.checkBox2.TabIndex = 44;
+            this.checkBox2.Text = "C++ Redistributable 2015-2022";
+            this.checkBox2.UseVisualStyleBackColor = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(426, 18);
+            this.label5.Location = new System.Drawing.Point(446, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 27);
             this.label5.TabIndex = 43;
             this.label5.Text = "DataBase";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(750, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(165, 27);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "DEV Tools";
             // 
             // label4
             // 
@@ -133,9 +263,9 @@
             this.label4.Font = new System.Drawing.Font("Lucida Console", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(761, 18);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 27);
+            this.label4.Size = new System.Drawing.Size(165, 27);
             this.label4.TabIndex = 42;
-            this.label4.Text = "TOOLS";
+            this.label4.Text = "DEV Tools";
             // 
             // label3
             // 
@@ -146,6 +276,17 @@
             this.label3.Size = new System.Drawing.Size(63, 27);
             this.label3.TabIndex = 41;
             this.label3.Text = "IDE";
+            // 
+            // checkBox14
+            // 
+            this.checkBox14.AutoSize = true;
+            this.checkBox14.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox14.Location = new System.Drawing.Point(755, 177);
+            this.checkBox14.Name = "checkBox14";
+            this.checkBox14.Size = new System.Drawing.Size(112, 23);
+            this.checkBox14.TabIndex = 38;
+            this.checkBox14.Text = "Fiddler";
+            this.checkBox14.UseVisualStyleBackColor = false;
             // 
             // JetBrains
             // 
@@ -173,7 +314,7 @@
             // 
             this.MongoDB.AutoSize = true;
             this.MongoDB.BackColor = System.Drawing.Color.RoyalBlue;
-            this.MongoDB.Location = new System.Drawing.Point(431, 119);
+            this.MongoDB.Location = new System.Drawing.Point(451, 119);
             this.MongoDB.Name = "MongoDB";
             this.MongoDB.Size = new System.Drawing.Size(208, 23);
             this.MongoDB.TabIndex = 37;
@@ -184,7 +325,7 @@
             // 
             this.XAMPP.AutoSize = true;
             this.XAMPP.BackColor = System.Drawing.Color.RoyalBlue;
-            this.XAMPP.Location = new System.Drawing.Point(431, 90);
+            this.XAMPP.Location = new System.Drawing.Point(451, 90);
             this.XAMPP.Name = "XAMPP";
             this.XAMPP.Size = new System.Drawing.Size(88, 23);
             this.XAMPP.TabIndex = 36;
@@ -195,7 +336,7 @@
             // 
             this.Docker.AutoSize = true;
             this.Docker.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Docker.Location = new System.Drawing.Point(431, 206);
+            this.Docker.Location = new System.Drawing.Point(451, 206);
             this.Docker.Name = "Docker";
             this.Docker.Size = new System.Drawing.Size(196, 23);
             this.Docker.TabIndex = 35;
@@ -206,23 +347,45 @@
             // 
             this.MySQL.AutoSize = true;
             this.MySQL.BackColor = System.Drawing.Color.RoyalBlue;
-            this.MySQL.Location = new System.Drawing.Point(431, 61);
+            this.MySQL.Location = new System.Drawing.Point(451, 61);
             this.MySQL.Name = "MySQL";
             this.MySQL.Size = new System.Drawing.Size(208, 23);
             this.MySQL.TabIndex = 34;
             this.MySQL.Text = "MySQL Workbench";
             this.MySQL.UseVisualStyleBackColor = false;
             // 
+            // checkBox13
+            // 
+            this.checkBox13.AutoSize = true;
+            this.checkBox13.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox13.Location = new System.Drawing.Point(755, 148);
+            this.checkBox13.Name = "checkBox13";
+            this.checkBox13.Size = new System.Drawing.Size(100, 23);
+            this.checkBox13.TabIndex = 27;
+            this.checkBox13.Text = "Python";
+            this.checkBox13.UseVisualStyleBackColor = false;
+            // 
             // Postman
             // 
             this.Postman.AutoSize = true;
             this.Postman.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Postman.Location = new System.Drawing.Point(431, 177);
+            this.Postman.Location = new System.Drawing.Point(451, 177);
             this.Postman.Name = "Postman";
             this.Postman.Size = new System.Drawing.Size(112, 23);
             this.Postman.TabIndex = 28;
             this.Postman.Text = "Postman";
             this.Postman.UseVisualStyleBackColor = false;
+            // 
+            // checkBox12
+            // 
+            this.checkBox12.AutoSize = true;
+            this.checkBox12.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox12.Location = new System.Drawing.Point(755, 119);
+            this.checkBox12.Name = "checkBox12";
+            this.checkBox12.Size = new System.Drawing.Size(112, 23);
+            this.checkBox12.TabIndex = 26;
+            this.checkBox12.Text = "Node.js";
+            this.checkBox12.UseVisualStyleBackColor = false;
             // 
             // Python
             // 
@@ -235,6 +398,17 @@
             this.Python.Text = "Python";
             this.Python.UseVisualStyleBackColor = false;
             // 
+            // checkBox11
+            // 
+            this.checkBox11.AutoSize = true;
+            this.checkBox11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox11.Location = new System.Drawing.Point(755, 90);
+            this.checkBox11.Name = "checkBox11";
+            this.checkBox11.Size = new System.Drawing.Size(196, 23);
+            this.checkBox11.TabIndex = 25;
+            this.checkBox11.Text = "GitHub Desktop";
+            this.checkBox11.UseVisualStyleBackColor = false;
+            // 
             // Node
             // 
             this.Node.AutoSize = true;
@@ -245,6 +419,17 @@
             this.Node.TabIndex = 26;
             this.Node.Text = "Node.js";
             this.Node.UseVisualStyleBackColor = false;
+            // 
+            // checkBox10
+            // 
+            this.checkBox10.AutoSize = true;
+            this.checkBox10.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkBox10.Location = new System.Drawing.Point(755, 61);
+            this.checkBox10.Name = "checkBox10";
+            this.checkBox10.Size = new System.Drawing.Size(64, 23);
+            this.checkBox10.TabIndex = 24;
+            this.checkBox10.Text = "Git";
+            this.checkBox10.UseVisualStyleBackColor = false;
             // 
             // GitHub
             // 
@@ -294,7 +479,7 @@
             // 
             this.Java.AutoSize = true;
             this.Java.BackColor = System.Drawing.Color.RoyalBlue;
-            this.Java.Location = new System.Drawing.Point(431, 148);
+            this.Java.Location = new System.Drawing.Point(451, 148);
             this.Java.Name = "Java";
             this.Java.Size = new System.Drawing.Size(124, 23);
             this.Java.TabIndex = 40;
@@ -342,6 +527,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Daily Use";
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(767, 206);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(124, 23);
+            this.checkBox1.TabIndex = 45;
+            this.checkBox1.Text = "WhatsApp";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -360,7 +555,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(216, 27);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Web Browsers";
+            this.label7.Text = "System Tools";
             // 
             // label6
             // 
@@ -587,78 +782,26 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBox1
+            // label10
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(767, 206);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(124, 23);
-            this.checkBox1.TabIndex = 45;
-            this.checkBox1.Text = "WhatsApp";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label10.ForeColor = System.Drawing.Color.Chartreuse;
+            this.label10.Location = new System.Drawing.Point(721, 426);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(331, 135);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "💡 Note: If the download does not start automatically, a temporary folder named T" +
+    "emp is created in the C:\\ drive. You can manually run the .exe file directly fro" +
+    "m that folder if needed.";
             // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.checkBox2.Location = new System.Drawing.Point(54, 264);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(376, 23);
-            this.checkBox2.TabIndex = 44;
-            this.checkBox2.Text = "C++ Redistributable 2015-2022";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.checkBox3.Location = new System.Drawing.Point(54, 148);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(364, 23);
-            this.checkBox3.TabIndex = 45;
-            this.checkBox3.Text = "Microsoft .NET Framework 4.8";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.checkBox4.Location = new System.Drawing.Point(54, 177);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(340, 23);
-            this.checkBox4.TabIndex = 46;
-            this.checkBox4.Text = "Microsoft .NET 6.0 Runtime";
-            this.checkBox4.UseVisualStyleBackColor = false;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.RoyalBlue;
-            this.checkBox5.Location = new System.Drawing.Point(54, 206);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(340, 23);
-            this.checkBox5.TabIndex = 47;
-            this.checkBox5.Text = "Microsoft .NET 7.0 Runtime";
-            this.checkBox5.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.RoyalBlue;
-            this.checkBox6.Location = new System.Drawing.Point(54, 235);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(340, 23);
-            this.checkBox6.TabIndex = 48;
-            this.checkBox6.Text = "Microsoft .NET 8.0 Runtime";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            // 
-            // Form1
+            // Applications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.RoyalBlue;
             this.ClientSize = new System.Drawing.Size(1055, 570);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -669,9 +812,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Applications";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Application Builder - All In One";
+            this.Load += new System.EventHandler(this.Applications_Load);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -735,6 +879,17 @@
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox checkBox9;
+        private System.Windows.Forms.CheckBox checkBox15;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox checkBox12;
+        private System.Windows.Forms.CheckBox checkBox11;
+        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.Label label10;
     }
 }
 
